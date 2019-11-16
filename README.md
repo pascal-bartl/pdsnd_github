@@ -5,7 +5,23 @@
 Bikeshare Project
 
 ### Description
-Describe what your project is about and what it does
+Run the _bikeshare.py_ file via GIT BASH.
+
+Now you have to anwser four question. Type in your response and submit it by pressing the Enter-Key.
+
+1. Would you like to see data for Chicago, New York, or Washington?
+2. Would you like to filter the data by month, day, both or not at all?
+3. Which month?
+4. Which day?
+
+__Please notice that a certain format and syntax is expected.__
+
+Several bikesharing-data-statistics are presented based on the filters you have choosen by responding to the four questions.
+
+Finally you can choose to see indivual trip data.
+
+Quit the program when have you seen enough data.
+
 
 ### Files used
 - washington.csv
@@ -13,7 +29,7 @@ Describe what your project is about and what it does
 - chicago.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+The UDACITY Instructors provided a template with some hints which has been used within this _bikeshare.py_ file. Thank you very much!
 
 ### Software Requirements
 - Git for Windows
