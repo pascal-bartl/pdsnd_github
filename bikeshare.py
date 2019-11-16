@@ -25,16 +25,16 @@ def get_filters():
             break
 
     while True:
-        case_m = input('Would you like to filter the data by month, day, both or not at all? Type "none" for no time filter: ')
-        if case_m not in ('month', 'day', 'both', 'none'):
+        Case_M = input('Would you like to filter the data by month, day, both or not at all? Type "none" for no time filter: ')
+        if Case_M not in ('month', 'day', 'both', 'none'):
             print("Not an appropriate choice. This Input Function is case sensitive.")
         else:
             break
 
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
-        month_temp = input('[If you entered "day" or "none" before just enter a random month now, it will not affect the analysis] Which month? All, January, February, March, April, May, or June?: ')
-        if month_temp not in ('All', 'January', 'February', 'March', 'April', 'May', 'June'):
+        Month_Temp = input('[If you entered "day" or "none" before just enter a random month now, it will not affect the analysis] Which month? All, January, February, March, April, May, or June?: ')
+        if Month_Temp not in ('All', 'January', 'February', 'March', 'April', 'May', 'June'):
             print("Not an appropriate choice. This Input Function is case sensitive.")
         else:
             break
@@ -43,8 +43,8 @@ def get_filters():
     while True:
         try:
             while True:
-                day_temp = input('[If you entered "month" or "none" before just enter a random day now, it will not affect the analysis] Which day? All, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday: ')
-                if day_temp not in ('All', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'):
+                Day_Temp = input('[If you entered "month" or "none" before just enter a random day now, it will not affect the analysis] Which day? All, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday: ')
+                if Day_Temp not in ('All', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'):
                     print("Not an appropriate choice. This Input Function is case sensitive.")
                 else:
                     break
@@ -52,15 +52,15 @@ def get_filters():
         except ValueError:
             print("Not an appropriate choice. This Input Function is case sensitive.")
 
-    if case_m in ('both'):
-        month = month_temp
-        day = day_temp
-    elif case_m in ('month'):
-        month = month_temp
+    if Case_M in ('both'):
+        month = Month_Temp
+        day = Day_Temp
+    elif Case_M in ('month'):
+        month = Month_Temp
         day = 'All'
-    elif case_m in ('day'):
+    elif Case_M in ('day'):
         month = 'All'
-        day = day_temp
+        day = Day_Temp
     else:
         month = 'All'
         day = 'All'
@@ -68,12 +68,12 @@ def get_filters():
 
 
     print('-'*40)
-    return city, case_m, month, day
+    return city, Case_M, month, day
 
 
 ##########################################################################
 
-def load_data(city, case_m, month, day):
+def load_data(city, Case_M, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
 
@@ -241,14 +241,14 @@ def user_stats(df):
 
 def main():
     while True:
-        city, case_m, month, day = get_filters()
+        city, Case_M, month, day = get_filters()
 
         #city = 'Washington'
         #case_m = 'both'
         #month = 'All'
         #day = 'All'
 
-        df = load_data(city, case_m, month, day)
+        df = load_data(city, Case_M, month, day)
 
 
         #print(city)
