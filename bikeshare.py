@@ -25,8 +25,8 @@ def get_filters():
             break
 
     while True:
-        case_m = input('Would you like to filter the data by month, day, both or not at all? Type "none" for no time filter: ')
-        if case_m not in ('month', 'day', 'both', 'none'):
+        Case_M = input('Would you like to filter the data by month, day, both or not at all? Type "none" for no time filter: ')
+        if Case_M not in ('month', 'day', 'both', 'none'):
             print("Not an appropriate choice. This Input Function is case sensitive.")
         else:
             break
@@ -52,13 +52,13 @@ def get_filters():
         except ValueError:
             print("Not an appropriate choice. This Input Function is case sensitive.")
 
-    if case_m in ('both'):
+    if Case_M in ('both'):
         month = Month_Temp
         day = Day_Temp
-    elif case_m in ('month'):
+    elif Case_M in ('month'):
         month = Month_Temp
         day = 'All'
-    elif case_m in ('day'):
+    elif Case_M in ('day'):
         month = 'All'
         day = Day_Temp
     else:
@@ -68,12 +68,12 @@ def get_filters():
 
 
     print('-'*40)
-    return city, case_m, month, day
+    return city, Case_M, month, day
 
 
 ##########################################################################
 
-def load_data(city, case_m, month, day):
+def load_data(city, Case_M, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
 
@@ -241,14 +241,14 @@ def user_stats(df):
 
 def main():
     while True:
-        city, case_m, month, day = get_filters()
+        city, Case_M, month, day = get_filters()
 
         #city = 'Washington'
         #case_m = 'both'
         #month = 'All'
         #day = 'All'
 
-        df = load_data(city, case_m, month, day)
+        df = load_data(city, Case_M, month, day)
 
 
         #print(city)
