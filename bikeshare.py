@@ -33,8 +33,8 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
-        month_temp = input('[If you entered "day" or "none" before just enter a random month now, it will not affect the analysis] Which month? All, January, February, March, April, May, or June?: ')
-        if month_temp not in ('All', 'January', 'February', 'March', 'April', 'May', 'June'):
+        Month_Temp = input('[If you entered "day" or "none" before just enter a random month now, it will not affect the analysis] Which month? All, January, February, March, April, May, or June?: ')
+        if Month_Temp not in ('All', 'January', 'February', 'March', 'April', 'May', 'June'):
             print("Not an appropriate choice. This Input Function is case sensitive.")
         else:
             break
@@ -53,10 +53,10 @@ def get_filters():
             print("Not an appropriate choice. This Input Function is case sensitive.")
 
     if case_m in ('both'):
-        month = month_temp
+        month = Month_Temp
         day = day_temp
     elif case_m in ('month'):
-        month = month_temp
+        month = Month_Temp
         day = 'All'
     elif case_m in ('day'):
         month = 'All'
